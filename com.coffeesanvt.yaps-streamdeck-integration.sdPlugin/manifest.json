@@ -1,0 +1,111 @@
+{
+	"Name": "YAPS Streamdeck Integration",
+	"Version": "0.1.0.0",
+	"Author": "CoffeeSanVT",
+	"Actions": [
+		{
+			"Name": "Horizontal Flip",
+			"UUID": "com.coffeesanvt.yaps-streamdeck-integration.model-flip",
+			"Icon": "imgs/actions/flip-model/icon",
+			"Tooltip": "Flip your model horizontally",
+			"PropertyInspectorPath": "ui/model-flip.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/flip-model/key-off",
+					"TitleAlignment": "bottom"
+				},
+				{
+					"Image": "imgs/actions/flip-model/key-on",
+					"TitleAlignment": "bottom"
+				}
+			]
+		},
+		{
+			"Name": "Change Expression",
+			"UUID": "com.coffeesanvt.yaps-streamdeck-integration.change-expression",
+			"Icon": "imgs/actions/expression/icon",
+			"Tooltip": "Toggle expression",
+			"PropertyInspectorPath": "ui/expression.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/expression/key-off",
+					"TitleAlignment": "bottom"
+				},
+				{
+					"Image": "imgs/actions/expression/key-on",
+					"TitleAlignment": "bottom"
+				}
+			]
+		},
+		{
+			"Name": "Toggle Asset",
+			"UUID": "com.coffeesanvt.yaps-streamdeck-integration.toggle-asset",
+			"Icon": "imgs/actions/items/icon",
+			"Tooltip": "Toggle a asset in your model",
+			"PropertyInspectorPath": "ui/toggle-item.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/items/key-off",
+					"TitleAlignment": "bottom"
+				},
+				{
+					"Image": "imgs/actions/items/key-on",
+					"TitleAlignment": "bottom"
+				}
+			]
+		},
+		{
+			"Name": "Toggle Position Preset",
+			"UUID": "com.coffeesanvt.yaps-streamdeck-integration.position-preset",
+			"Icon": "imgs/actions/position-preset/icon",
+			"Tooltip": "Toggle a asset in your model",
+			"PropertyInspectorPath": "ui/position-preset.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/position-preset/key-off",
+					"TitleAlignment": "bottom"
+				},
+				{
+					"Image": "imgs/actions/position-preset/key-on",
+					"TitleAlignment": "bottom"
+				}
+			]
+		}
+	],
+	"Category": "YAPS",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "YAPS Streamdeck Integration",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "7.1"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "24",
+		"Debug": "enabled"
+	},
+	"UUID": "com.coffeesanvt.yaps-streamdeck-integration"
+}

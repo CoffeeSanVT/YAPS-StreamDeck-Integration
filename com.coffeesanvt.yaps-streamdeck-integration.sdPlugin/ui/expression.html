@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head lang="en">
+    <title>Model Flip</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+
+<body>
+    <sdpi-item label="Socket URL">
+        <sdpi-textfield setting="serverUrl" global placeholder="ws://127.0.0.1:19167">
+        </sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item label="Expressions">
+        <sdpi-select 
+            setting="selectedExpression" 
+            datasource="getExpressions" 
+            loading="Loading Expressions..."
+            hot-reload 
+        > 
+    </sdpi-select>
+    </sdpi-item>
+</body>
+
+</html>
