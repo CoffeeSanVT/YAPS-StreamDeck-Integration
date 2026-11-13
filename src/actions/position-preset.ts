@@ -9,7 +9,6 @@ import type { JsonValue } from "@elgato/utils";
 
 import { sendRequest } from "../yapsClient";
 import type { ApplyPreset, GetPresets } from "../yaps-types";
-import { resetOtherKeys } from "../util";
 import { createOptions, type PropertyInspectorOption } from "./property-inspector-options";
 
 type PositionSettings = {
@@ -43,7 +42,6 @@ export class PositionPreset extends SingletonAction<PositionSettings> {
         const response = await sendRequest<ApplyPreset>(`apply_preset:${preset}`);
         if (response.status === "error") return;
 
-        await resetOtherKeys(ev.action, "selectedPreset");
         streamDeck.logger.debug(preset);
     }
 
