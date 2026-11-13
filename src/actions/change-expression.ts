@@ -10,6 +10,7 @@ import type { JsonValue } from "@elgato/utils";
 import { sendMessage, sendRequest } from "../yapsClient";
 import type { GetEmotions } from "../yaps-types";
 import { createOptions, type PropertyInspectorOption } from "./property-inspector-options";
+import { resetOtherKeys } from "../util";
 
 type ExpressionSettings = {
     selectedExpression?: string;
@@ -40,6 +41,9 @@ export class ChangeExpression extends SingletonAction<ExpressionSettings> {
         if (!expression) return;
 
         sendMessage(`set_emotion:${expression}:${!ev.payload.state}`);
+        
+        await resetOtherKeys(ev.action, "selectedExpression");
+        streamDeck.logger.debug(expression);
     }
 
     async #getExpressions(): Promise<PropertyInspectorOption[]> {
